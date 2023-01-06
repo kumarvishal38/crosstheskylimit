@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna MIT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- https://fonts.google.com/specimen/Poppins  Bold 700 :- Google Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+
+
+
+
+
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="img/Logo.png" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="test.html">Tests</a></li>
+                    <li><a href="checklist.html">Checklist</a></li>
+                    <li><a href="extracurricular.html">Extracurricular</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+          
+          
+
+        </nav>
+<div class="text-box">
+    <h1>Worlds Best Abroad Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa reiciendis repudiandae ullam ipsa reprehenderit sunt, tenetur ipsam labore impedit <br> quos fugiat nam eos illo quod cumque voluptate quam ea id molestias excepturi soluta, vero beatae! Enim quibusdam consequuntur beatae?</p>
+    <a href="about.html" class="hero-btn">About Us</a>
+    
+</div>
+    </section>
+
+    <div id="sidebar" class="sidebar">
+        <!-- Add a link for the sidebar -->
+        <a href="#home">SAT</a>
+        <!-- Add more links for the sidebar -->
+        <a href="#news">ACT</a>
+        <a href="sdf">DET</a>
+        <a href="sdf">TOEFL</a>
+        <a href="sdf">IELTS</a>
+        <a href="sdf">OLYMPIADS</a>
+      </div>
+      
+      <script>
+        // Get a reference to the sidebar element
+        var sidebar = document.getElementById('sidebar');
+      
+        // Add event listeners for mouse down and mouse up events
+        sidebar.addEventListener('mousedown', onMouseDown);
+        window.addEventListener('mouseup', onMouseUp);
+      
+        // Flag to track whether the sidebar is being dragged
+        var isDragging = false;
+      
+        // Variables to track the current position of the sidebar
+        var currentX;
+        var currentY;
+        var initialX;
+        var initialY;
+        var xOffset = 200;
+        var yOffset =200;
+      
+        // Function to handle mouse down event
+        // Function to handle mouse out event
+// Function to handle mouse out event
+//Function to handle mouse out event
+function onMouseDown(e) {
+    // Set the initial position of the sidebar
+    initialX = e.clientX - xOffset;
+    initialY = e.clientY - yOffset;
+  
+    // Set the isDragging flag to true
+    isDragging = true;
+  
+    // Add event listeners for mouse move and mouse out events
+    window.addEventListener('mousemove', onMouseMove);
+  }
+
+
+function onMouseOut(e) {
+  // Check if the mouse button is not being held down
+  if (e.buttons == 0) {
+    // Stop the dragging behavior
+    isDragging = false;
+
+    // Remove the mouse move event listener
+    window.removeEventListener('mousemove', onMouseMove);
+  }
+}
+ 
+      
+        // Function to handle mouse move event
+        function onMouseMove(e) {
+          // Check if the sidebar is being dragged
+          if (isDragging) {
+            // Calculate the new position of the sidebar
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+      
+            // Update the position of the sidebar
+            xOffset = currentX;
+            yOffset = currentY;
+            sidebar.style.top = currentY + "px";
+            sidebar.style.left = currentX + "px";
+          }
+        }
+      
+        // Function to handle mouse out event
+        function onMouseOut(e) {
+          // Remove the mouse move and mouse out event listeners
+          window.removeEventListener('mousemove', onMouseMove);
+          sidebar.removeEventListener('mouseout', onMouseOut);
+        }
+      
+        // Function to handle mouse up event
+        function onMouseUp(e) {
+          // Set the isDragging flag to false
+          isDragging = false;
+        }
+      </script>
+
+    <script>
+        $('.feat-btn').click(function(){
+            $('nav ul .feat-show'). toggleClass("show");
+            $('nav ul .first '). toggleClass("rotate");
+        });
+
+        $('.serv-btn').click(function(){
+            $('nav ul .serv-show'). toggleClass("show1");
+            $('nav ul .second '). toggleClass("rotate");
+
+        });
+
+        $('nav ul li').click(function(){
+            $(this).addclass("active").sibilings().removeclass("active");
+        });
+    </script>
+
+
+
+<!-- Blog -->
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            
+            <h2>DET</h2>
+            <img src="img/DET.png">
+            <br>
+            <h4>INTRODUCTION </h4>
+            <br>
+            <p>The Duolingo English Test [DEThttps://englishtest.duolingo.com/applicants] 
+                is an English proficiency assessment  used to evaluate your ability to read , write, speak and listen to English.
+                The test is overall for testing your ability in field of English. Which is going to help you to submit the English test results for university application process.</p>
+            <br>
+            <p>The Duolingo English test is one of the most widely accepted online profiency tests in the world .  More than 1000s of universities accept the Duolingo English Test {det}</p>
+            <br>
+            <h4>How can I take the Duolingo?</h4>
+            <br>
+            <p>Its  really very much easy to attempt this test . it can be taken from anywhere , anytime ,online with the help of  your gadgets 
+                its means yaa you can attempt this test even you are in your room or Before one hour even you have to  going for picnic too. 
+               but yeah make sure that you have a good internet access and a web came [ means camera of your gadget should be  on   }  .
+               
+               ITS SUPER EASY AND SUPER AFFORDABLE .</p>
+            <br>
+            <h4>PATTERN OF DUOLINGO TEST -</h4>
+            <br>
+            <p>SET UP 
+                ARRANGEMENT for the  Duolingo test : 5 minutes</p>
+            <br>
+            <p>Adaptive 
+                Test
+                Listening , reading , writing and speaking skills are assessed
+                
+                : 45 minutes</p>
+            <br>
+            <p>Video Interview + Writing Test
+                Speaking and writing on the topics given 
+                  
+              : 10 minutes</p>
+            <br>
+            <p> And Also the test takers can get their results within 48 hours of completing the test , which is really fast and you can share it with ayone , immediately.
+            </p>
+            <br>
+            <h4>Cost of test-</h4>
+            <br>
+            <p>You can receive your score and interview for only $49”  , while most other certification tests cost over $200. Its really affordable too to attempt.</p>
+            <br>
+            <h4>Examples of universities accepting Duolingo -</h4>
+            <br>
+            <p>Massachusetts Institute of Technology- Minimum score of 120</p>
+            <p>Harvard – Minimum score of 125 </p>
+            <p>Yale University- Minimum score of 120</p>
+            <p>Cornell University- Minimum score of 120</p>
+            <p>New York University- Minimum score of 130</p>
+            <p>Pennsylvania State University- Minimum score of 120</p>
+            <p>University of California Berkeley- Minimum score of 115</p>
+            <p>Johns Hopkins University- Minimum score of 120</p>
+            <p>Washington University- Minimum score of 105</p>
+            <p>Northeastern University- Minimum score of 105</p>
+            <p>University of Utah- Minimum score of 105</p>
+            <p>Many Other universities also accept DET</p>
+            <br>
+            <h4>SOME OF THE QUESTIONS OFTEN ASKED—</h4>
+            <img src="img/DET2.jpeg">
+            <br>
+            <p> Ques. Is Duolingo accepted for USA student visa?</p>
+            <p>   Ans. -   Yes, Duolingo English tests are accepted for USA student visa       applications. There are over 100 universities in USA that accept DET. Even after the pandemic, the universities are still accepting Duolingo as proof of proficiency.</p>
+            <br>
+            <p>Ques. Is Duolingo easier than IELTS?</p>
+            <p>Ans. The difficulty level of the tests is based on the knowledge of the students about the English language. Duolingo tests are shorter in duration than IELTS.</p>
+            <br>
+            <p>Ques. Is 100 Duolingo score accepted in USA?</p>
+            <p>Ans. The minimum score for Duolingo tests varies by university. The average DET score requirement for USA universities lies between 100-150. However, the top universities generally accept DET scores above 120.
+            </p>
+            <br>
+            <p>Ques. How long is Duolingo test valid?</p>
+            <p>Ans. Duolingo tests are valid for 2 years.</p>
+            <br>
+            <p>Ques. Does Harvard accept Duolingo?</p>
+            <p>Ans. Duolingo is accepted in Harvard Extension School with a minimum requirement of 125. Harvard University does not accept Duolingo for its mainstream courses.</p>
+            <br>
+            <p>Ques. How many times can I retake Duolingo test? </p>
+            <p>Ans. Students can attempt the Duolingo test twice a month and not more than that. However, they can also try again in the next month.</p>
+            <br>
+            <p>Ques. Can I convert Duolingo to IELTS? </p>
+            <p>es. Duolingo scores can be easily converted to IELTS. A DET score of 85-90 is equivalent to an IELTS score of 5.5. On the other hand, a DET score of 115-120 is equivalent to an IELTS score of 7.0</p>
+            <br>
+            <h4>Take free practice exams available</h4>
+            <br>
+            <p>After you sign up for the test, you will have the access to many practice exams and             you can take the test as many times as you want to take it. Practising from the practice test is highly recommended as it helps you to understand the structure of the exam, which includes the nature of question types and the time limit given. As each test gives you a different set of questions through which you will be able to understand the type of questions and will feel comfortable while giving the final test.</p>
+            <br>
+            <h4>Improve your accent and pronunciation</h4>
+            <br>
+            <p>To work on your speaking skills, you must focus on speaking clearly and understanding the pronunciation, intonation and stress of syllables. Improve your pronunciation by practicing longer sentences and ensuring that you don’t break the flow while speaking with a clear focus on every syllable or stress in different words.
+            </p>
+            <br>
+            <h4>Sharpen your vocabulary and grammar</h4>
+            <br>
+            <p>Grammar and vocabulary are the constitutions of every language. The key to sharpening your grammar is to practice them through different types of questions and writing. You must also read as much as you can to better your vocabulary and create flashcards to learn new words every day.</p>
+            <br>
+            <h4>Stay open to feedback</h4>
+            <br>
+            <p> Once you have started practicing your speaking, writing, reading and listening in English, you must always stay open to feedback. Have conversations with those who have a good grasp of English and ask them to give you notes on how you can be better. For speaking skills, you can record yourself and get feedback from others and for writing skills, try writing articles, short passage, entries</p>
+            <br>
+            <h4>SUGGESTIONS TO USE MATERIALS LIKE---</h4>
+            <br>
+            <p>Duolingo English test tests your overall grasp on English field . So you need to work on grammar , vocabulary, pronunciation ,accent and on comprehension side. </p>
+            <br>
+            <h4>You can use materials like – </h4>
+            <br>
+            <p>1)
+                The Duolingo English Test:{ Essential Tips, Strategies, Practice, Structure, Grammar, Spellings & Vocabulary}   By Ashok Kumar</p>
+            <br>
+            <p>first ever book on the Duolingo English Test in the whole world aims at making students aware about the different tasks of the test and providing tips and strategies to score at least 125 out of 160. Besides, this book has the sufficient contents to upgrade the level of knowledge of the English language, specifically for the non-native speakers.</p>
+            <br>
+            <p>2}
+                Teacher Luke </p>
+            <br>
+            <p>He have YouTube channel too . and also he is the best teacher for English Duolingo test 
+                About Luke
+                Luke has over 10 years of English teaching experience and a Master’s Degree in English Education. He’s the number one Duolingo English Test teacher and has helped over 200,000 students worldwide with Duolingo English Test lessons and courses.
+                </p>
+            <br>
+            <h4>ON DAY OF EXAM YOU NEED TO CARE ABOUT :-</h4>
+            <br>
+            <p>• A photo ID issued by the government (passport, driver’s license or government ID)</p>
+            <p>    • A quiet area with good lighting.</p>
+            <p>    • An uninterrupted period of more than one hour.</p>
+            <p>    • A computer with a built-in front-facing webcam, speakers, and microphone (no earphones are allowed to prevent cheating).</p>
+            <p>    • A strong internet connection and a browser that works with the test.</p>
+            <br>
+            <h4>Duolingo English Test rules:</h4>
+            <br>
+            <p>• You must be alone in the room (which must be well lit).</p>
+            <p>    • Your ears must be visible and uncovered.</p>
+            <p>    • Your face must be visible and unobscured.</p>
+            <p>    • No headphones or earphones.</p>
+            <p>    • No outside materials, including mobile devices, notes, or textbooks.</p>
+            <p>    • No communication with anyone else is permitted.</p>
+            <p>    • No writing utensils or paper are permitted.</p>
+            <p>    • You must not look away from the screen for any significant period.</p>
+            <p>    • You aren’t permitted to leave the test window on your web browser for any reason.</p>
+
+            <p>ALL THE BEST FOR YOUR TEST JUST BE CONFIDENT AND START PREPARING.</p>
+            
+
+
+
+
+
+
+
+        </div>
+     
+
+</section>
+
+<!-- Blog Page Content End -->
+
+
+<!-- footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Checklist</h4>
+                <ul>
+                    <li><a href="#">Middle school</a></li>
+                    <li><a href="#">9th grade</a></li>
+                    <li><a href="#">10th grade</a></li>
+                    <li><a href="#">11th grade</a></li>
+                    <li><a href="#">12th grade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">Extracarricualar</a></li>
+                    <li><a href="#">SAT</a></li>
+                    <li><a href="#">ACT</a></li>
+                    <li><a href="#">Duolingo</a></li>
+                    <li><a href="#">Toefl</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                   
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<!-- --------------- JavaScript for Toggle Menu ---------------- -->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+<!-- Blog -->
+
+
+
+
+</body>
+
+</html>
